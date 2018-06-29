@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 
-import { Recipes } from '../../api/recipes.js';
+import { Recipes } from '../../api/recipes/recipes.js';
 import './NewRecipe.html';
 
 Template.NewRecipe.helpers({
