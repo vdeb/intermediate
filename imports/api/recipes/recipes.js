@@ -5,6 +5,8 @@ import SimpleSchema from 'simpl-schema'
 
 export const Recipes = new Mongo.Collection('Recipes');
 
+
+
 SimpleSchema.extendOptions(['autoform']);
 RecipeSchema = new SimpleSchema({
 	name : {
@@ -38,3 +40,4 @@ RecipeSchema = new SimpleSchema({
 });
 
 Recipes.attachSchema(RecipeSchema);
+
