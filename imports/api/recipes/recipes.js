@@ -5,9 +5,18 @@ import SimpleSchema from 'simpl-schema'
 
 export const Recipes = new Mongo.Collection('Recipes');
 
-
-
 SimpleSchema.extendOptions(['autoform']);
+
+Ingredient = new SimpleSchema({
+	name : {
+		type : String
+	},
+	amount : {
+		type : String
+	}
+});
+
+
 RecipeSchema = new SimpleSchema({
 	name : {
 		type : String,
@@ -16,6 +25,20 @@ RecipeSchema = new SimpleSchema({
 	desc : {
 		type : String,
 		label : "Description"
+	},
+	ingredients : {
+		type : Array
+	},
+	"ingredients.$" : {
+		type : Ingredient
+	},
+	inMenu : {
+		type : Boolean,
+		defaultValue : false,
+		optional : true,
+		autoform: {
+			type : 'hidden'
+		}
 	},
 	author : {
 		type : String,
