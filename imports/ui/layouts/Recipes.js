@@ -16,8 +16,8 @@ Template.Recipes.onCreated(function RecipestOnCreated() {
 });
 
 Template.Recipes.helpers({
-        recipes: ()=> {
-            return Recipes.find({});
-        },
-    });﻿
+	recipes: ()=> {
+		return Recipes.find({});
+	},
+});﻿
 
